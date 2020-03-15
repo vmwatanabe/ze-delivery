@@ -29,7 +29,10 @@ function GetPocInfo({ lat, long }) {
     <Redirect
       to={{
         pathname: '/products',
-        state: { data: data && data.pocSearch && data.pocSearch[0] }
+        state: {
+          pocId:
+            data && data.pocSearch && data.pocSearch[0] && data.pocSearch[0].id
+        }
       }}
     />
   );
