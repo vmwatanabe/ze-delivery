@@ -1,0 +1,27 @@
+@import '../../assets/sass/_variables';
+
+.header {
+  background-color: $primaryColor;
+  height: 60px;
+  font-size: 11px;
+  width: 100%;
+  position: relative;
+
+  .header-content {
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    &__column {
+      height: 100%;
+    }
+    .logo {
+      height: 100%;
+      width: auto;
+    }
+  }
+}

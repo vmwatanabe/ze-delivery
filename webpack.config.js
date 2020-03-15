@@ -10,7 +10,15 @@ module.exports = {
   // define babel loader
   module: {
     rules: [
-      { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ }
+      { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader']
+      }
     ]
   }
 };
